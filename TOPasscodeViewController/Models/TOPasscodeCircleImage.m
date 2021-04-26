@@ -38,7 +38,7 @@
         }
 
         CGRect rect = (CGRect){padding + inset, padding + inset, size - (inset * 2), size - (inset * 2)};
-        UIBezierPath* ovalPath = [UIBezierPath bezierPathWithOvalInRect:rect];
+        UIBezierPath* ovalPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:8];
         [[UIColor blackColor] setFill];
         [ovalPath fill];
 
@@ -60,7 +60,7 @@
         CGRect circleRect = (CGRect){{padding, padding}, circleSize};
         circleRect = CGRectInset(circleRect, (strokeWidth * 0.5f), (strokeWidth * 0.5f));
 
-        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:circleRect];
+        UIBezierPath *path =[UIBezierPath bezierPathWithRoundedRect:circleRect cornerRadius:8];
         [[UIColor blackColor] setStroke];
         path.lineWidth = strokeWidth;
         [path stroke];
